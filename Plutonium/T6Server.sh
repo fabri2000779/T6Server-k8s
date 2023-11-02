@@ -4,13 +4,13 @@ _script="$(readlink -f ${BASH_SOURCE[0]})"
 # Delete last component from $_script
 _mydir="$(dirname $_script)"
 # Name of the server shown in the title of the terminal window
-NAME="$(SERVER_NAME)"
+NAME="$SERVER_NAME"
 # Your Game Path (where there is binkw32.dll)
-PAT=~/T6Server/Server/$(SERVER_TYPE)
+PAT=~/T6Server/Server/$SERVER_TYPE
 # Paste the server key from https://platform.plutonium.pw/serverkeys
-KEY="$(SERVER_KEY)"
+KEY="$SERVER_KEY"
 # Name of the config file the server should use. (default: dedicated.cfg)
-if [ "$(SERVER_TYPE)" == "Multiplayer" ]; then
+if [ "$SERVER_TYPE" == "Multiplayer" ]; then
   CFG=dedicated.cfg
 else 
   CFG=dedicated_zm.cfg
@@ -18,7 +18,7 @@ fi
 # Port used by the server (default: 4976) -> Don't forget to allow server port in ufw fail2ban
 PORT=4976
 # Game Mode ( Multiplayer / Zombie ) -> ( t6mp / t6zm )
-if [ "$(SERVER_TYPE)" == "Multiplayer" ]; then
+if [ "$SERVER_TYPE" == "Multiplayer" ]; then
   MODE=t6mp
 else
   MODE=t6zm

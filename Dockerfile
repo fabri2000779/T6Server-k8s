@@ -5,6 +5,7 @@ ENV WINEDEBUG="fixme-all"
 ENV WINEARCH="win64"
 ENV DISPLAY=":0"
 ENV SERVER_TYPE="Zombie"
+ENV SERVER_NAME="T6Server"
 
 WORKDIR /root/T6Server
 
