@@ -6,6 +6,7 @@ ENV WINEARCH="win64"
 ENV DISPLAY=":0"
 ENV SERVER_TYPE="Zombie"
 ENV SERVER_NAME="T6Server"
+ENV SERVER_PORT=4976
 
 WORKDIR /root/T6Server
 
@@ -17,7 +18,6 @@ RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y \
     gnupg2 \
     software-properties-common \
     apt-transport-https \
-    xvfb \
     winbind \
     curl
 

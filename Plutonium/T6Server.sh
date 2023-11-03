@@ -16,7 +16,7 @@ else
   CFG=dedicated_zm.cfg
 fi
 # Port used by the server (default: 4976) -> Don't forget to allow server port in ufw fail2ban
-PORT=4976
+PORT=$SERVER_PORT
 # Game Mode ( Multiplayer / Zombie ) -> ( t6mp / t6zm )
 if [ "$SERVER_TYPE" == "Multiplayer" ]; then
   MODE=t6mp
