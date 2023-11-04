@@ -17,7 +17,6 @@ spec:
       app.kubernetes.io/component: {{ .Release.Name }}
   replicas: {{ .Values.server.replicas }}
   strategy: {{ toYaml .Values.server.updateStrategy | nindent 4 }}
-  {{- end }}
   template:
     metadata:
       labels:
