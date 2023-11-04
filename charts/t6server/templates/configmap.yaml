@@ -5,9 +5,6 @@ metadata:
   namespace: {{ .Release.Namespace }}
 data:
   dedicated_zm.cfg: |
-    //////////////////////////////////////////////////
-    // GENERAL SETTINGS                             //
-    //////////////////////////////////////////////////
-    {{.Values.server.config | indent 4}}
+    {{ .Values.server.config | nindent 4 }}
 
     map_rotate
