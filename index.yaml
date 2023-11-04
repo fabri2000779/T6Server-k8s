@@ -3,6 +3,16 @@ entries:
   t6server:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2023-11-04T04:40:54.096853585Z"
+    description: T6Server for Kubernetes
+    digest: 2d0723989790b221549c7c86373587ca5c9180ab21ab0b09130cafa3226723de
+    name: t6server
+    type: application
+    urls:
+    - https://github.com/fabri2000779/T6Server-k8s/releases/download/t6server-1.0.6/t6server-1.0.6.tgz
+    version: 1.0.6
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2023-11-04T03:43:02.671965331Z"
     description: T6Server for Kubernetes
     digest: 85ee347aceb073e4e86127a1a96a7bd98dccc2944c66b02be7682bbe1400b507
@@ -51,4 +61,4 @@ entries:
     urls:
     - https://github.com/fabri2000779/T6Server-k8s/releases/download/t6server-1.0.0/t6server-1.0.0.tgz
     version: 1.0.0
-generated: "2023-11-04T03:43:02.671987262Z"
+generated: "2023-11-04T04:40:54.097033286Z"
