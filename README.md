@@ -37,4 +37,4 @@ This repo is a fork of [T6server](https://github.com/Sterbweise/T6Server) that m
 • **T6Server for Debian:** https://github.com/Sterbweise/T6Server <br>
 • **Plutonium:** https://plutonium.pw <br>
 • **IW4MAdmin by RaidMax:** https://github.com/RaidMax/IW4M-Admin <br>
-• **Plutonium-Updater by mxbe:** https://github.com/mxve/plutonium-updater.rs <br>
+• **Plutonium-Updater by mxve:** https://github.com/mxve/plutonium-updater.rs <br>
