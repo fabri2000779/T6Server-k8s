@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+  namespace: {{ .Release.Namespace }}
+data:
+  dedicated_zm.cfg: |
+    //////////////////////////////////////////////////
+    // GENERAL SETTINGS                             //
+    //////////////////////////////////////////////////
+    {{.Values.server.config | indent 4}}
+
+    map_rotate

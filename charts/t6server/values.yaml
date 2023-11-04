@@ -1,0 +1,53 @@
+image:
+  repository: ghcr.io/fabri2000779/t6server-k8s
+  tag: v1.0.0
+  pullPolicy: IfNotPresent
+
+server:
+# The name and type of the server. for type you can choose between "Zombie" or "Multiplayer"
+  name: "T6Server"
+  type: "Zombie"
+
+# The server key. You can get it from https://forum.plutonium.pw/serverkeys
+  key: "changeme"
+
+  replicas: 1
+
+  labels: {}
+
+# Annotations to be added to the server pods.
+  annotations: {}
+
+# The lifecycle of the container. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/
+  lifecycle: {}
+# Extra environment variables to pass to the container.
+  extraEnvs: {}
+
+# The update strategy to apply to the Deployment. Can be "RollingUpdate" or "Recreate".
+  updateStrategy:
+    type: Recreate
+
+# Resources are specified in the form of requests and limits (see http://kubernetes.io/docs/user-guide/compute-resources/ for more details).
+  resources:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 500m
+      memory: 512Mi
+
+# The service type: ClusterIP, NodePort or LoadBalancer.
+# Ingess is not supported yet. if you want to use ingress you have to create it manually
+# and then change the service type to ClusterIP
+# NOTE: To use ingress or LoadBalancer, your provider must support UDP load balancing.
+  service:
+    type: NodePort
+    port: 4976
+
+# The server config. You can add any config you want here.
+  config: |
+    g_password ""
+    party_maxplayers 4
+    g_logSync 2
+    g_log "logs\games_zm.log"
+    sv_maprotation "exec zm_classic_tomb.cfg map zm_tomb"

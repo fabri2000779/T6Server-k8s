@@ -10,11 +10,7 @@ PAT=~/T6Server/Server/$SERVER_TYPE
 # Paste the server key from https://platform.plutonium.pw/serverkeys
 KEY="$SERVER_KEY"
 # Name of the config file the server should use. (default: dedicated.cfg)
-if [ "$SERVER_TYPE" == "Multiplayer" ]; then
-  CFG=dedicated.cfg
-else 
-  CFG=dedicated_zm.cfg
-fi
+CFG=dedicated.cfg
 # Port used by the server (default: 4976) -> Don't forget to allow server port in ufw fail2ban
 PORT=$SERVER_PORT
 # Game Mode ( Multiplayer / Zombie ) -> ( t6mp / t6zm )
