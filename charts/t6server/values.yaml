@@ -8,7 +8,7 @@ server:
   name: "T6Server"
   type: "Zombie"
 
-# The server key. You can get it from https://forum.plutonium.pw/serverkeys
+# The server key. You can get it from https://platform.plutonium.pw/serverkeys
   key: "changeme"
 
   replicas: 1

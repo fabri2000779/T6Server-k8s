@@ -1,57 +1,40 @@
 
 
-![alt text](https://img.shields.io/badge/Debian-10-red?logo=Debian)
-![alt text](https://img.shields.io/badge/Debian-11-green?logo=Debian)
 ![alt text](https://img.shields.io/badge/Plutonium-T6-blue)
 
 <img src="https://imgur.com/bBrx8Hf.png" alt="drawing" width="350"/>
 
 # T6Server
-All files needed for a simple installation and configuration of a T6 server on Debian.
+T6Server in Kubernetes
 
-📌 [Installation for Arch Linux](https://github.com/xr4zz/T6Server)
+📌 [Installation for Debian Linux](https://github.com/Sterbweise/T6Server)
 
 ## Installation
-1. Download files : 
+1. Add Helm repo : 
    ```shell
-   git clone https://github.com/Minami-xan/T6Server.git
+   helm repo add t6server https://fabri2000779.github.io/T6Server-k8s/
    ```
-2. Move to `T6Server` Folder. <pre>cd ~/T6Server/</pre>
-3. Run the Installation Script `install.sh` . <pre>sudo env "HOME=$HOME" bash install.sh</pre>
-4. **Installation Complete**
+2. to install it:
+   ```shell
+   helm upgrade --install t6server t6server/t6server
+   ```
 
 ## Configuration
-1. Move to `Plutonium` Folder. <pre>cd ~/T6Server/Plutonium/</pre>
-2. Edit `T6Server.sh` with your information. <pre>nano T6Server.sh</pre>
-3. Allow server port. <pre>sudo bash ~/T6Server/Scripts/allow_port.sh</pre>
-**Configuration Complete**
+In the `values.yaml` you can find all the configurations but there are some of them that are needed
+to make your server works:
+server.key
+server.type
+server.name
+server.config
 
-## Launch Server
-1. Move to `Plutonium` Folder. <pre>cd ~/T6Server/Plutonium</pre>
-2. Launch Server. <pre>./T6Server.sh</pre>
-   I advise you to use `tmux` or `screen` to open and manage multiple servers.
+This are some of the config that i suggest to look.
 
-## Issues
-### Wine display errors
-   + Don't care of these errors, plutonium server doesn't have graphic support.
+NOTE: if you dont set a correct key the server will fail to start.
 
-### Unable to load import '_BinkWaitStopAsyncThread@4' from module 'binkw32.dll'
-   + Check your PAT variable in ./T6Server.sh. (It will be ping binkw32.dll dir)
-   + Make sure to your user can read the file in all sub-dir of T6Server.
-
-### Server don't appear in Plutonium Servers List
-   + Check if your server port is open with UDP protocol. (Example: 4976)
-
-### Connection with nix socket lost
-   + Check your plutonium key validity
-   + Check if your plutonium key are correctly write in T6Server.sh
-
-### [DW][Auth] Handling authentication request
-   + Check your plutonium key validity
-   + Check if your plutonium key are correctly write in T6Server.sh
+This repo is a fork of [T6server](https://github.com/Sterbweise/T6Server) that make this possible
 
 ## Source
-• **Topic by me:** https://forum.plutonium.pw/topic/12870/guide-debian-t6-server-on-linux-vps-dedicated-server <br>
+• **T6Server for Debian:** https://github.com/Sterbweise/T6Server <br>
 • **Plutonium:** https://plutonium.pw <br>
 • **IW4MAdmin by RaidMax:** https://github.com/RaidMax/IW4M-Admin <br>
 • **Plutonium-Updater by mxbe:** https://github.com/mxve/plutonium-updater.rs <br>
