@@ -40,7 +40,7 @@ spec:
           - name: SERVER_NAME
             value: {{ .Values.server.name }}
           - name: SERVER_PORT
-            value: {{ .Values.server.service.port }}
+            value: {{ .Values.server.service.port | quote }}
           - name: SERVER_TYPE
             value: {{ .Values.server.type }}
           - name: SERVER_KEY
