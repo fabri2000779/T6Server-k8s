@@ -48,8 +48,8 @@ spec:
         {{- if .Values.server.extraEnvs }}
           {{- toYaml .Values.server.extraEnvs | nindent 12 }}
         {{- end }}
-        {{- if .Values.controller.resources }}
-        resources: {{ toYaml .Values.controller.resources | nindent 12 }}
+        {{- if .Values.server.resources }}
+        resources: {{ toYaml .Values.server.resources | nindent 12 }}
         {{- end }}
         volumeMounts:
         {{ if eq .Values.server.type "Zombie" }}
