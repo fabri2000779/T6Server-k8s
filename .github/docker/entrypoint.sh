@@ -10,4 +10,12 @@ chmod +x plutonium-updater
 
 # Make executable script
 chmod +x T6Server.sh
+
+mkdir -p /root/T6Server/Plutonium/storage/t6/scripts/zm
+mkdir -p /root/T6Server/Plutonium/storage/t6/scripts/mp
+
+# Download mapvote mod from https://github.com/DoktorSAS/PlutoniumT6Mapvote/tree/master
+wget https://ams1.vultrobjects.com/t6server/mapvote_zm.gsc -O /root/T6Server/Plutonium/storage/t6/scripts/zm/mapvote.gsc
+wget https://ams1.vultrobjects.com/t6server/mapvote_mp.gsc -O /root/T6Server/Plutonium/storage/t6/scripts/mp/mapvote.gsc
+
 exec "$@"
