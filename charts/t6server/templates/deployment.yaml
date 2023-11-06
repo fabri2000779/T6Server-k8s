@@ -54,12 +54,12 @@ spec:
         volumeMounts:
         {{ if eq .Values.server.type "Zombie" }}
         - name: config
-          mountPath: /root/T6Server/Server/Zombie/nain/dedicated.cfg
+          mountPath: /root/T6Server/Server/Zombie/main/dedicated.cfg
           subPath: dedicated.cfg
         {{- end }}
         {{ if eq .Values.server.type "Multiplayer" }}
         - name: config
-          mountPath: /root/T6Server/Server/Multiplayer/nain/dedicated.cfg
+          mountPath: /root/T6Server/Server/Multiplayer/main/dedicated.cfg
           subPath: dedicated.cfg
         {{- end }}
       volumes:
