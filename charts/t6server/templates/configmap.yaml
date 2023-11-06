@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}-config
   namespace: {{ .Release.Namespace }}
 data:
-  dedicated_zm.cfg: |
+  dedicated.cfg: |
     {{ .Values.server.config | nindent 4 }}
 
     map_rotate
